@@ -10,11 +10,11 @@ using Microsoft.Extensions.CommandLineUtils;
 
 namespace VsixTool
 {
-    public static class Installer
+    public static class Program
     {
         static int Main(string[] args)
         {
-            var app = new CommandLineApplication { Name = "VsixInstaller" };
+            var app = new CommandLineApplication { Name = "vsix" };
             app.HelpOption("-?|-h|--help");
 
             var vsixPath = app.Option(
