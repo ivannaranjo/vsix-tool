@@ -102,7 +102,7 @@ namespace VsixTool
                 IInstalledExtension installedVsix = null;
                 if (ems.TryGetInstalledExtension(vsix.Header.Identifier, out installedVsix))
                 {
-                    Console.WriteLine($"Extension {vsix.Header.Name} version {vsix.Header.Version} already installed, unistalling first.");
+                    Console.WriteLine($"Extension {vsix.Header.Name} is installed with version {installedVsix.Header.Version}, unistalling it.");
                     ems.Uninstall(installedVsix);
                 }
 
